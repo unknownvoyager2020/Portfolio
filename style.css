@@ -208,6 +208,10 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.home__contact:hover {
+  background-color: var(--color-orange);
+}
+
 /* Section common */
 
 .section {
@@ -387,8 +391,25 @@ p {
 /* For below 768px screen width */
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+
+    --font-large: 30px;
+
+    --font-medium: 18px;
+
+    --font-regular: 16px;
+
+    --font-small: 14px;
+
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
   #navbar {
     flex-direction: column;
@@ -410,15 +431,31 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
     flex-direction: column;
+  }
+
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }
